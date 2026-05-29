@@ -51,7 +51,11 @@ body{
     color: white;
     font-size: 18px;
     font-weight: bold;
-    transition: color 0.3s;
+    transition: color 0.5s;
+    -webkit-transition: color 0.5s;
+    -moz-transition: color 0.5s;
+    -ms-transition: color 0.5s;
+    -o-transition: color 0.5s;
 }
 
 /* Navbar hover */
@@ -67,7 +71,7 @@ main{
 
 h1{
     color: greenyellow;
-    font-size: 50px;
+    font-size: 80px;
 }
 
 h2{
@@ -82,9 +86,13 @@ h3{
 img{
     width: 350px;
     height: auto;
-    border-radius: 10px;
-    margin: 10px;
+    border-radius: 11px;
+    margin: 11px;
     transition: transform 0.3s ease;
+    -webkit-border-radius: 11px;
+    -moz-border-radius: 11px;
+    -ms-border-radius: 11px;
+    -o-border-radius: 11px;
 }
 
 /* Image Hover */
@@ -106,7 +114,7 @@ footer{
     background-color: greenyellow;
     color: black;
     text-align: center;
-    padding: 20px;
+    padding: 19px;
     margin-top: 30px;
 }
 @media (max-width: 767px){
