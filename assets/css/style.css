@@ -45,6 +45,9 @@ body{
     margin: 0;
     padding: 0;
 }
+.navbar ul li a i{
+    margin-right: 6px;
+}
 
 .navbar ul li a{
     text-decoration: none;
@@ -103,19 +106,91 @@ img:hover{
     -ms-transform: scale(1.06);
     -o-transform: scale(1.06);
 }
-
+.hero-image{
+    width: 900px;
+    max-width: 100%;
+    height: auto;
+}
+.about-image{
+    width: 800px;
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 25px auto;
+}
+.service-image{
+    width: 500px;
+    max-width: 100%;
+    height: auto;
+    display:block;
+    margin: 20px;
+}
 /* Lists */
 ul{
     list-style-type: square;
 }
+form{
+    width: 350px;
+    max-width: 85%;
+    margin: 31px auto;
+    padding: 21px;
+    border: 3px solid #7cb342;
+    border-radius: 11px;
+    background-color: white;
+    -webkit-border-radius: 11px;
+    -moz-border-radius: 11px;
+    -ms-border-radius: 11px;
+    -o-border-radius: 11px;
+}
 
-/* Footer */
-footer{
-    background-color: greenyellow;
-    color: black;
+form h2{
     text-align: center;
-    padding: 19px;
-    margin-top: 30px;
+    margin-bottom: 20px;
+}
+
+form label{
+    display: block;
+    margin-top: 10px;
+    font-weight: bold;
+}
+
+input[type="text"],
+input[type="tel"],
+input[type="number"]{
+    width: 100%;
+    padding: 8px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+input[type="radio"]{
+    margin-top: 10px;
+}
+
+input[type="submit"]{
+    background-color: #7cb342;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+input[type="submit"]:hover{
+    background-color: #5a8f26;
+}
+footer a{
+    color: inherit;
+    text-decoration: none;
+}
+
+footer a:hover{
+    text-decoration: underline;
+}
+
+footer i{
+    margin-right: 5px;
 }
 @media (max-width: 767px){
 

@@ -18,11 +18,11 @@
     
     <nav class="navbar">
             <ul>
-                <li><a href="index.html">Homepage</a></li>
-                <li><a href="about.html">About Us</a></li>
-                <li><a href="service.html">Service</a></li>
-                <li><a href="enquiry.html">Enquiry</a></li>
-                <li><a href="contact.html">Contact</a></li>
+              <li><a href="index.html"><i class="fas fa-house"></i> Homepage</a></li>
+              <li><a href="about.html"><i class="fas fa-circle-info"></i> About Us</a></li>
+              <li><a href="service.html"><i class="fas fa-paw"></i> Service</a></li>
+              <li><a href="enquiry.html"><i class="fas fa-envelope"></i> Enquiry</a></li>
+              <li><a href="contact.html"><i class="fas fa-phone"></i> Contact</a></li>
             </ul>
     </nav>
 </header>
@@ -36,39 +36,63 @@
             </div>
 
             <form>
-                <h2>Enquiry</h2>
-                <label>First Name</label>
-                <input type="text"><br><br>
-                <label>Last Name</label>
-                <input type="text"><br><br>
-                <ion-icon name="call"></ion-icon>
-                <label>Cellphone No</label>
-                <input type="tel"><br><br>
-                <label>ID</label>
-                <input type="numbers"><br><br>
-                <label>Gender</label>
-                <input type="radio" name="g">Male
-                <input type="radio" name="g">Female
-                <input type="radio" name="g">Others<br><br>
+               <h2>Enquiry</h2>
+
+                <label for="fname">First Name</label>
+                <input type="text" id="fname" name="fname" required>
+
+                <label for="lname">Last Name</label>
+                <input type="text" id="lname" name="lname" required>
+
+                <label for="phone">Cellphone No</label>
+                <input type="tel" id="phone" name="phone" required>
+
+                <label for="idnum">ID Number</label>
+                <input type="number" id="idnum" name="idnum">
+
+                <label>Gender</label><br>
+
+                <input type="radio" id="male" name="gender" value="Male">
+                <label for="male">Male</label>
+
+                <input type="radio" id="female" name="gender" value="Female">
+                <label for="female">Female</label>
+
+                <input type="radio" id="other" name="gender" value="Other">
+                <label for="other">Other</label>
+
+                <br><br>
+
+                <input type="submit" value="Submit">
             </form>
+              
         </section>
     </main>
      <!--Footer section-->
-    <footer>
+   <footer>
 
         <div>
-            &copy 2026 Petshop. All rights reserved
+             <i class="fas fa-copyright"></i>
+             2026 Petshop. All rights reserved
         </div>
 
         <div>
-          <p>
-             Healthy Pets, Healthy Family
-          </p>
+                <p>
+                  <i class="fas fa-paw"></i>
+                  Healthy Pets, Healthy Family
+                </p>
         </div>
 
         <div>
-            Contact us:infor@Petshop.com | 012 374 4893
-        </div> 
+              <i class="fas fa-envelope"></i>
+              <a href="mailto:info@petshop.com">info@petshop.com</a>
+
+        |
+
+              <i class="fas fa-phone"></i>
+              <a href="tel:0123744893">012 374 4893</a>
+        </div>
+
     </footer>
 </body>
 </html>
