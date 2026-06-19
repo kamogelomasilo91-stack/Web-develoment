@@ -1,4 +1,7 @@
-document.getElementById("enquiryForm").addEventListener("submit", function(event) {
+// Enquiry form handling (only if enquiryForm exists)
+const enquiryFormEl = document.getElementById("enquiryForm");
+if (enquiryFormEl) {
+  enquiryFormEl.addEventListener("submit", function (event) {
     event.preventDefault();
 
     let name = document.getElementById("name").value;
@@ -7,30 +10,56 @@ document.getElementById("enquiryForm").addEventListener("submit", function(event
     let message = document.getElementById("message").value;
 
     if (name === "" || email === "" || message === "") {
-        alert("Please fill in all required fields.");
-        return;
+      alert("Please fill in all required fields.");
+      return;
     }
 
     alert("Thank you, " + name + "! Your enquiry has been submitted.");
 
     // Clear the form
     document.getElementById("enquiryForm").reset();
-});
+  });
+}
 
-document.getElementById("contactForm").addEventListener("submit", function(event) {
-    event.preventDefault();
+// Live realtime (local) time in footer (black text)
+(function () {
+  const footer = document.querySelector("footer");
+  if (!footer) return;
 
-    let name = document.getElementById("name").value;
+  let timeEl = document.getElementById("realtime-clock");
+  if (!timeEl) {
+    timeEl = document.createElement("div");
+    timeEl.id = "realtime-clock";
+    timeEl.style.color = "black";
+    timeEl.style.marginTop = "6px";
+    footer.appendChild(timeEl);
+  }
 
-    alert("Thank you, " + name + "! Your message has been sent.");
+  function pad2(n) {
+    return String(n).padStart(2, "0");
+  }
 
-    document.getElementById("contactForm").reset();
-});
-mapboxgl.accessToken = "YOUR_MAPBOX_ACCESS_TOKEN";
+  function render() {
+    const now = new Date();
+    // Format: YYYY-MM-DD HH:mm:ss (24h)
+    const formatted =
+      now.getFullYear() +
+      "-" +
+      pad2(now.getMonth() + 1) +
+      "-" +
+      pad2(now.getDate()) +
+      " " +
+      pad2(now.getHours()) +
+      ":" +
+      pad2(now.getMinutes()) +
+      ":" +
+      pad2(now.getSeconds());
 
-const map = new mapboxgl.Map({
-    container: "map",
-    style: "mapbox://styles/mapbox/streets-v12",
-    center: [29.453, -23.904], // Polokwane
-    zoom: 12
-});
+    timeEl.textContent = "Live time: " + formatted;
+  }
+
+  render();
+  setInterval(render, 1000);
+})();
+
+
